@@ -1,0 +1,8 @@
+@model Service.Models.VehicleMake
+<form asp-action="Create" method="POST">
+    <label asp-for="Name">New manufacturer name:</label>
+    <input asp-for="Name">
+    <label asp-for="Abbreviation">Abbreviation:</label>
+    <input asp-for="Abbreviation">
+    <button type="submit">Add</button>
+</form>

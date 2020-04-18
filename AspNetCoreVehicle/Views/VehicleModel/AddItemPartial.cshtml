@@ -1,0 +1,15 @@
+@model Service.Models.VehicleModel
+<form asp-action="Create" method="POST">
+    <label asp-for="Name">New model name:</label>
+    <input asp-for="Name">
+    <label asp-for="Abbreviation">Abbreviation:</label>
+    <input asp-for="Abbreviation">
+    <label asp-for="ManufacturerID">Manufacturer:</label>  
+    <select asp-for="ManufacturerID" asp-items="ViewBag.Manufacturer">
+        <option value="">-- Select Manufacturer --</option>  
+    </select>
+    <button type="submit">Add</button>
+</form> 
+
+
+

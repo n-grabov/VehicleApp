@@ -1,0 +1,23 @@
+@model Service.Models.VehicleModel
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <dl class="dl-horizontal">
+        <form asp-action="Edit" method="POST" asp-route-id="@Model.ID">
+            <label asp-for="Name">New name:</label>
+            <input asp-for="Name" value="@Model.Name" /> <br />
+            <label asp-for="Abbreviation">New abbreviation:</label>
+            <input asp-for="Abbreviation" value="@Model.Abbreviation" /><br />
+            <label asp-for="ManufacturerID">Manufacturer:</label>  
+            <select asp-for="ManufacturerID" asp-items="ViewBag.Manufacturer">
+                <option value="">-- Select Manufacturer --</option>  
+            </select>
+            <button type="submit">Update</button>
+            <button type="submit" asp-action="Index">Cancel</button>
+        </form> 
+    </dl>
+</div>
